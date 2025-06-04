@@ -2,9 +2,10 @@ import scipy.io
 import numpy as np
 from utils.evaluation import print_results
 
-from algorithms import sso, hoa, ggo, cat_mouse, honey_badger, black_widow, sin_cos_biavoa, icoa, aco_rf, rae, efo, osco, noa, spa, wroa, hso, gfo, sto, qsso, teso, kmso, dffso, htoa, spo, orpo, tcoa, gdoa, qeoa, thdoa, pis, cro, soso, cdmo, mbo, fno, peso, poa, bfoa, pdoa, bthoa, hsaga
+from algorithms import sso, hoa, ggo, cat_mouse, honey_badger, black_widow, sin_cos_biavoa, icoa, aco_rf, rae, efo, osco, noa, spa, thdoa_gwo_hoa, updated, wroa, hso, gfo, sto, qsso, teso, kmso, dffso, htoa, spo, orpo, tcoa, gdoa, qeoa, thdoa, pis, cro, soso, cdmo, mbo, fno, peso, poa, bfoa, pdoa, bthoa, hsaga, ieho, thdoa_hoa
 
 data = scipy.io.loadmat("data/lungs.mat")
+#data = scipy.io.loadmat("data/Lung_Cancer.mat")
 X = data["X"]
 y = data["Y"].ravel()
 
@@ -48,11 +49,21 @@ algorithms = {
     "POA": poa,
     "BFOA": bfoa,
     "PDOA": pdoa,
-    "BTHOA": bthoa
+    "BTHOA": bthoa,
+    #"HSAGA": hsaga,
+    "IEHO":ieho,
 
 }
 algos = {
-   "HSAGA": hsaga
+   "THDOAHOA":thdoa_hoa,
+   "SSO": sso,
+   "HOA": hoa
+   #"Updated":updated
+   #"SSO":sso,
+   #"HOA": hoa,
+   #"THDOA":thdoa,
+   #"THDOAGWOHOA":thdoa_gwo_hoa
+   #"IEHO":ieho
 }
 results = []
 
