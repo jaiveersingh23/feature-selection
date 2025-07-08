@@ -89,7 +89,7 @@ algos = {
 }
 results = []
 
-for name, module in algos.items():6
+for name, module in algos.items():
     try:
         sel, acc, num, t = module.run(X, y)
         print_results(name, sel, acc, num, t)
